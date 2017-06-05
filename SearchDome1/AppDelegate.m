@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "MyWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () {
+     NSWindow *window;
+}
 
 @end
 
@@ -16,6 +19,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+//    NSRect frame = CGRectMake(0, 0, 480, 60);
+//    window = [NSApplication sharedApplication].mainWindow;
+//    NSWindowStyleMask style = NSWindowStyleMaskBorderless;
+//    MyWindow *myWindow = [[MyWindow alloc] initWithContentRect:frame styleMask:style backing:NSBackingStoreBuffered defer:YES];
+//    [myWindow makeKeyAndOrderFront:self];
+//    [myWindow center];
 }
 
 

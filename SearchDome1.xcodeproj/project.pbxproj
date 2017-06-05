@@ -12,6 +12,8 @@
 		9793ADDA1EE53BF00080E527 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADD91EE53BF00080E527 /* ViewController.m */; };
 		9793ADDC1EE53BF00080E527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9793ADDB1EE53BF00080E527 /* Assets.xcassets */; };
 		9793ADDF1EE53BF00080E527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9793ADDD1EE53BF00080E527 /* Main.storyboard */; };
+		9793ADE81EE53D990080E527 /* MyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADE71EE53D990080E527 /* MyWindow.m */; };
+		9793ADEB1EE569930080E527 /* SBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADEA1EE569930080E527 /* SBButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		9793ADDB1EE53BF00080E527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9793ADDE1EE53BF00080E527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9793ADE01EE53BF00080E527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9793ADE61EE53D990080E527 /* MyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWindow.h; sourceTree = "<group>"; };
+		9793ADE71EE53D990080E527 /* MyWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWindow.m; sourceTree = "<group>"; };
+		9793ADE91EE569930080E527 /* SBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBButton.h; sourceTree = "<group>"; };
+		9793ADEA1EE569930080E527 /* SBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 				9793ADDB1EE53BF00080E527 /* Assets.xcassets */,
 				9793ADDD1EE53BF00080E527 /* Main.storyboard */,
 				9793ADE01EE53BF00080E527 /* Info.plist */,
+				9793ADE61EE53D990080E527 /* MyWindow.h */,
+				9793ADE71EE53D990080E527 /* MyWindow.m */,
+				9793ADE91EE569930080E527 /* SBButton.h */,
+				9793ADEA1EE569930080E527 /* SBButton.m */,
 				9793ADD51EE53BF00080E527 /* Supporting Files */,
 			);
 			path = SearchDome1;
@@ -149,6 +159,8 @@
 				9793ADDA1EE53BF00080E527 /* ViewController.m in Sources */,
 				9793ADD71EE53BF00080E527 /* main.m in Sources */,
 				9793ADD41EE53BF00080E527 /* AppDelegate.m in Sources */,
+				9793ADEB1EE569930080E527 /* SBButton.m in Sources */,
+				9793ADE81EE53D990080E527 /* MyWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
