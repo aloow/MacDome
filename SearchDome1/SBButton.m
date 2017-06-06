@@ -37,4 +37,24 @@
     
     [super drawRect:dirtyRect];
 }
+
+- (void)setColor:(NSColor*)color {
+    
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    [style setAlignment:NSTextAlignmentCenter];
+    NSDictionary *attrsDictionary  = [NSDictionary dictionaryWithObjectsAndKeys:
+                                      self.TextColor, NSForegroundColorAttributeName,
+                                      self.font, NSFontAttributeName,
+                                      style, NSParagraphStyleAttributeName, nil];
+    
+    NSMutableAttributedString *attrTitle =
+    [[NSMutableAttributedString alloc] initWithString:self.title attributes:attrsDictionary];
+    NSUInteger len = [attrTitle length];
+    NSRange range = NSMakeRange(0, len);
+    [attrTitle addAttribute:NSForegroundColorAttributeName value:color range:range];
+    [attrTitle fixAttributesInRange:range];
+    [self setAttributedTitle:attrTitle];
+    
+}
+
 @end

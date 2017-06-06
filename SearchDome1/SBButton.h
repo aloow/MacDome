@@ -13,5 +13,6 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable NSColor *BGColor;
 @property (nonatomic, strong) IBInspectable NSColor *TextColor;
 
+- (void)setColor:(NSColor*)color;
 
 @end

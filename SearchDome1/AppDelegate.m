@@ -9,9 +9,7 @@
 #import "AppDelegate.h"
 #import "MyWindow.h"
 
-@interface AppDelegate () {
-     NSWindow *window;
-}
+@interface AppDelegate ()
 
 @end
 
