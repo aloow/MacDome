@@ -27,11 +27,13 @@ static NSString *FileCell = @"fileCellID";
 
 @interface ViewController()<NSTextFieldDelegate,NSTableViewDelegate,NSTableViewDataSource>
 @property (assign) IBOutlet NSBox *seatchContainBox;
-@property (assign) IBOutlet NSTextField *searchBarText;
+
 @property (assign) IBOutlet NSImageView *fileTypeImage;
 @property (assign) IBOutlet NSTableView *tableView;
+@property (assign) IBOutlet NSTextField *searchBarText;
 
 @property (assign) IBOutlet NSBox *cellContainView;
+
 @property (assign) IBOutlet SBButton *memberBnt;
 @property (assign) IBOutlet SBButton *businessBnt;
 @property (assign) IBOutlet SBButton *scheduleBnt;
@@ -51,12 +53,11 @@ static NSString *FileCell = @"fileCellID";
 @end
 
 @implementation ViewController
-
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     [self setupUI];
-
 }
 
 
@@ -75,8 +76,8 @@ static NSString *FileCell = @"fileCellID";
     self.identifier = MemberCell;
     self.cellType = 1;
     //searchContainView border shadow
-//    _searchBarText.delegate = self;
-//    [_searchBarText setFocusRingType:NSFocusRingTypeNone];
+    _searchBarText.delegate = self;
+    [_searchBarText setFocusRingType:NSFocusRingTypeNone];
     //
 }
 #pragma mark - User Even
@@ -178,12 +179,12 @@ static NSString *FileCell = @"fileCellID";
         case 2: return 45.f; break;
         case 3: return 50.f; break;
         case 4: return 33.f; break;
-        case 5: return 41.f; break;
-        case 6: return 41.f; break;
+        case 5: return 53.f; break;
+        case 6: return 49.f; break;
         default:
             break;
     }
-    return .0f;
+    return 10.0f;
 }
 
 

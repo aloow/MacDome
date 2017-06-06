@@ -1215,13 +1215,6 @@
                                                 <font key="font" metaFont="system" size="28"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                <connections>
-                                                    <binding destination="XfG-lQ-9wD" name="displayPatternValue1" keyPath="self.searchBarText" id="ShP-cL-EXV">
-                                                        <dictionary key="options">
-                                                            <string key="NSDisplayPattern">%{value1}@</string>
-                                                        </dictionary>
-                                                    </binding>
-                                                </connections>
                                             </textFieldCell>
                                         </textField>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="XMQ-fq-9XK">
@@ -1272,15 +1265,13 @@
                         <outlet property="fileTypeImage" destination="teA-6Y-zfs" id="FYR-6o-nti"/>
                         <outlet property="informationBnt" destination="cY4-wY-d04" id="gQ3-Uj-OJh"/>
                         <outlet property="informationLine" destination="9Ks-XD-M8G" id="1JB-vd-5w6"/>
-                        <outlet property="meinformationLine" destination="9Ks-XD-M8G" id="Qbs-rE-SUH"/>
                         <outlet property="memberBnt" destination="kDg-mE-gtu" id="PdP-mm-35k"/>
                         <outlet property="memberLine" destination="PbQ-h2-zif" id="16Z-cE-l68"/>
                         <outlet property="notesBnt" destination="Xcg-hF-qbL" id="DsX-MS-B5w"/>
                         <outlet property="notesLine" destination="KQ2-AA-rnH" id="7vC-ix-RHz"/>
                         <outlet property="scheduleBnt" destination="uCM-ss-d6y" id="JDP-4A-9ku"/>
                         <outlet property="scheduleLine" destination="4rr-c3-shb" id="21D-Uz-fEg"/>
-                        <outlet property="searchBarText" destination="VG5-Vi-Qyk" id="aBc-qE-ezo"/>
-                        <outlet property="searchContainView" destination="dpI-5J-EHy" id="xBn-AC-chB"/>
+                        <outlet property="searchBarText" destination="VG5-Vi-Qyk" id="pdV-9d-TOv"/>
                         <outlet property="seatchContainBox" destination="Egi-Qw-2qF" id="hR1-7O-S5D"/>
                         <outlet property="tableView" destination="h30-FI-cdj" id="bzh-cG-WeO"/>
                     </connections>

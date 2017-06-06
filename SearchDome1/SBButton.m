@@ -40,6 +40,8 @@
 
 - (void)setColor:(NSColor*)color {
     
+    
+//    NSFont *font = [NSFont ]
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
     [style setAlignment:NSTextAlignmentCenter];
     NSDictionary *attrsDictionary  = [NSDictionary dictionaryWithObjectsAndKeys:
