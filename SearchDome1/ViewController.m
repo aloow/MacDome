@@ -9,6 +9,13 @@
 #import "ViewController.h"
 #import "SBButton.h"
 
+#import "MemberCellInfo.h"
+#import "BusinessCellInfo.h"
+#import "ScheduleCellInfo.h"
+#import "NotesCellInfo.h"
+#import "InformationCellInfo.h"
+#import "FileCellInfo.h"
+
 typedef NS_ENUM(NSUInteger, TTGState) {
     MemberTap = 1,
     BusinessTap,
@@ -28,7 +35,6 @@ static NSString *FileCell = @"fileCellID";
 @interface ViewController()<NSTextFieldDelegate,NSTableViewDelegate,NSTableViewDataSource>
 @property (assign) IBOutlet NSBox *seatchContainBox;
 
-@property (assign) IBOutlet NSImageView *fileTypeImage;
 @property (assign) IBOutlet NSTableView *tableView;
 @property (assign) IBOutlet NSTextField *searchBarText;
 
@@ -48,8 +54,11 @@ static NSString *FileCell = @"fileCellID";
 @property (assign) IBOutlet NSBox *informationLine;
 @property (assign) IBOutlet NSBox *fileLine;
 
-@property (assign) NSString *cellIdentifier;
+//@property (assign) NSString *cellIdentifier;
 @property (assign) TTGState cellType;
+@property (retain) NSMutableArray *tableviewCellArray;
+@property (assign) IBOutlet NSArrayController *searchResultsController;
+
 @end
 
 @implementation ViewController
@@ -58,15 +67,16 @@ static NSString *FileCell = @"fileCellID";
     [super viewDidLoad];
 
     [self setupUI];
+    [self setupData];
 }
 
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
+    
     // Update the view, if already loaded.
 }
-#pragma mark - UI
+#pragma mark - UI & Data
 - (void)setupUI {
     //(480,60)
     [self.view.window setContentSize:NSMakeSize(480.f, 60.f)];
@@ -79,6 +89,15 @@ static NSString *FileCell = @"fileCellID";
     _searchBarText.delegate = self;
     [_searchBarText setFocusRingType:NSFocusRingTypeNone];
     //
+}
+
+- (void)setupData {
+    MemberCellInfo *entity = [MemberCellInfo new];
+    entity.name = @"小六";
+    MemberCellInfo *entity2 = [MemberCellInfo new];
+    entity2.name = @"小liu";
+    self.searchResultsController.content = @[entity,entity2];
+    
 }
 #pragma mark - User Even
 - (IBAction)reloadTableViewBntTap:(SBButton *)sender {
@@ -134,41 +153,39 @@ static NSString *FileCell = @"fileCellID";
 
 #pragma mark - NSTableViewDelegate
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    /**
+     个别cell显示section问题，根据model中类型判断返回cellIdentifier
+     **/
+    
     NSTableCellView *cell = nil;
     switch (self.cellType) {
         case 1:
-            self.cellIdentifier = MemberCell;
-            cell = [tableView makeViewWithIdentifier:self.cellIdentifier owner:self];
-            //configure cell
+            [self configureMemberCell:tableView WithcellID:MemberCell row:row];
             break;
         case 2:
-            self.cellIdentifier = BusinessCell;
-            cell = [tableView makeViewWithIdentifier:self.cellIdentifier owner:self];
-            //configure cell
+            [self configureBusinessCell:tableView WithcellID:BusinessCell row:row];
             break;
         case 3:
-            self.cellIdentifier = ScheduleCell;
-            cell = [tableView makeViewWithIdentifier:self.cellIdentifier owner:self];
-            //configure cell
+            [self configureScheduleCell:tableView WithcellID:ScheduleCell row:row];
             break;
         case 4:
-            self.cellIdentifier = NotesCell;
-            cell = [tableView makeViewWithIdentifier:self.cellIdentifier owner:self];
-            //configure cell
+            [self configureNotesCell:tableView WithcellID:NotesCell row:row];
             break;
         case 5:
-            self.cellIdentifier = InformationCell;
-            cell = [tableView makeViewWithIdentifier:self.cellIdentifier owner:self];
-            //configure cell
+            [self configureInformationCell:tableView WithcellID:InformationCell row:row];
             break;
         case 6:
-            self.cellIdentifier = FileCell;
-            cell = [tableView makeViewWithIdentifier:self.cellIdentifier owner:self];
-            //configure cell
+            [self configureFileCell:tableView WithcellID:FileCell row:row];
             break;
         default:
             return nil;
             break;
+    }
+    NSArray *views = cell.subviews;
+    for ( NSView *view in views) {
+        if ([view isKindOfClass:[NSTextField class]]) {
+            [self originalTextField:(NSTextField*)view targetString:self.searchBarText.stringValue setColor:[NSColor redColor]];
+        }
     }
     return cell;
 }
@@ -186,21 +203,124 @@ static NSString *FileCell = @"fileCellID";
     }
     return 10.0f;
 }
+#pragma mark - Configure Cell
+- (NSTableCellView *)configureMemberCell:(NSTableView*)tableView WithcellID:(NSString *)cellIdentifier row:(NSInteger)index{
+    NSTableCellView* cell = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
+    MemberCellInfo *entity = self.tableviewCellArray[index];
+    
+    NSImageView *headIcon = [cell viewWithTag:101];
+    headIcon.image = [[NSImage alloc]initWithContentsOfURL:[NSURL URLWithString:entity.headIconUrl]];
+    
+    NSTextField *nameTextFiel = [cell viewWithTag:102];
+    nameTextFiel.stringValue = entity.name;
+    
+    NSImageView *fileIcon = [cell viewWithTag:103];
+    fileIcon.image = [[NSImage alloc]initWithContentsOfURL:[NSURL URLWithString:entity.fileIconUrl]];
+    return cell;
+}
 
+- (NSTableCellView *)configureBusinessCell:(NSTableView*)tableView WithcellID:(NSString *)cellIdentifier row:(NSInteger)index{
+    NSTableCellView* cell = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
+    BusinessCellInfo *entity = self.tableviewCellArray[index];
+    
+    //进行 ...略
+    NSTextField *progressType = [cell viewWithTag:101];
+    progressType.stringValue = entity.progressType;
+    
+    NSTextField *department = [cell viewWithTag:102];
+    department.stringValue = entity.department;
+    
+    NSTextField *date = [cell viewWithTag:103];
+    date.stringValue = entity.date;
+    
+    NSTextField *name = [cell viewWithTag:104];
+    name.stringValue = entity.name;
+    
+    NSImageView *fileIcon = [cell viewWithTag:105];
+    fileIcon.image = [[NSImage alloc]initWithContentsOfURL:[NSURL URLWithString:entity.fileIconUrl]];
+    
+    NSTextField *chargeName = [cell viewWithTag:106];
+    chargeName.stringValue = entity.chargeName;
+    
+    NSTextField *detailsTime = [cell viewWithTag:107];
+    detailsTime.stringValue = entity.detailsTime;
+    return cell;
+}
 
+- (NSTableCellView *)configureScheduleCell:(NSTableView*)tableView WithcellID:(NSString *)cellIdentifier row:(NSInteger)index{
+    NSTableCellView* cell = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
+    ScheduleCellInfo *entity = self.tableviewCellArray[index];
+    
+    NSTextField *schedule = [cell viewWithTag:101];
+    schedule.stringValue = entity.schedule;
+    
+    NSTextField *dayTime = [cell viewWithTag:102];
+    dayTime.stringValue = entity.dayTime;
+    return cell;
+}
+
+- (NSTableCellView *)configureNotesCell:(NSTableView*)tableView WithcellID:(NSString *)cellIdentifier row:(NSInteger)index{
+    NSTableCellView* cell = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
+    NotesCellInfo *entity = self.tableviewCellArray[index];
+    
+    NSTextField *notes = [cell viewWithTag:101];
+    notes.stringValue = entity.notes;
+    return cell;
+}
+
+- (NSTableCellView *)configureInformationCell:(NSTableView*)tableView WithcellID:(NSString *)cellIdentifier row:(NSInteger)index{
+    NSTableCellView* cell = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
+    InformationCellInfo *entity = self.tableviewCellArray[index];
+    
+    NSTextField *information = [cell viewWithTag:101];
+    information.stringValue = entity.information;
+    
+    NSImageView *fileIcon = [cell viewWithTag:102];
+    fileIcon.image = [[NSImage alloc]initWithContentsOfURL:[NSURL URLWithString:entity.fileIconUrl]];
+    
+    NSTextField *name = [cell viewWithTag:103];
+    name.stringValue = entity.name;
+    
+    NSTextField *detailsTime = [cell viewWithTag:104];
+    detailsTime.stringValue = entity.detailsTime;
+    return cell;
+}
+
+- (NSTableCellView *)configureFileCell:(NSTableView*)tableView WithcellID:(NSString *)cellIdentifier row:(NSInteger)index{
+    NSTableCellView* cell = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
+    FileCellInfo *entity = self.tableviewCellArray[index];
+    
+    NSImageView *fileIcon = [cell viewWithTag:101];
+    fileIcon.image = [[NSImage alloc]initWithContentsOfURL:[NSURL URLWithString:entity.fileIconUrl]];
+    
+    NSTextField *fileName = [cell viewWithTag:102];
+    fileName.stringValue = entity.fileName;
+    
+    NSTextField *detailsTime = [cell viewWithTag:102];
+    detailsTime.stringValue = entity.detailsTime;
+    return cell;
+}
 
 #pragma mark - NSTextFieldDelegate
-- (void)controlTextDidBeginEditing:(NSNotification *)obj {
-
-    NSLog(@"%s",__func__);
-}
-
 - (void)controlTextDidChange:(NSNotification *)obj {
-    NSLog(@"%s",__func__);
-    
+    if (obj.object == self.searchBarText && self.searchBarText.stringValue.length != 0) {
+        //configure text change
+        
+//        self
+    }
 }
 
-- (void)controlTextDidEndEditing:(NSNotification *)obj {
-    NSLog(@"%s",__func__);
+#pragma mark - String Tool
+- (void)originalTextField:(NSTextField*)orgTextField targetString:(NSString*)tarString setColor:(NSColor*)color {
+    NSRange range = [orgTextField.stringValue rangeOfString:tarString];
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:orgTextField.stringValue];
+    NSDictionary *attrsDictionary  = [NSDictionary dictionaryWithObjectsAndKeys:[NSColor redColor], NSForegroundColorAttributeName, nil];
+    [attrStr addAttributes:attrsDictionary range:range];
+    [orgTextField setAttributedStringValue:attrStr];
+}
+
+- (void)dealloc {
+    [self.tableviewCellArray release];
+    [super dealloc];
 }
 @end
