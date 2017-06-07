@@ -10,6 +10,15 @@
 
 @implementation FileCellInfo
 
+-(instancetype)initWithDict:(NSDictionary *)dict{
+    if (self == [super init]) {
+        self.fileIconUrl = dict[@"fileIconUrl"];
+        self.fileName = dict[@"fileName"];
+        self.detailsTime = dict[@"detailsTime"];
+    }
+    return self;
+}
+
 - (void)dealloc {
     [self.fileIconUrl release];
     [self.fileName release];

@@ -65,21 +65,31 @@ static NSString *FileCell = @"fileCellID";
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self setupUI];
     [self setupData];
 }
 
-
+- (void)viewWillAppear {
+    [super viewWillAppear];
+    [self setupUI];
+}
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
     
     // Update the view, if already loaded.
 }
 #pragma mark - UI & Data
+- (void)setupData {
+    MemberCellInfo *entity = [MemberCellInfo new];
+    entity.name = @"小六";
+    MemberCellInfo *entity2 = [MemberCellInfo new];
+    entity2.name = @"小liu";
+    self.searchResultsController.content = @[entity,entity2];
+    
+}
+
 - (void)setupUI {
-    //(480,60)
-    [self.view.window setContentSize:NSMakeSize(480.f, 60.f)];
+
+    [self setWindowSize:NSMakeSize(480.f, 60.f)];
     self.searchBarText.delegate = self;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -91,14 +101,6 @@ static NSString *FileCell = @"fileCellID";
     //
 }
 
-- (void)setupData {
-    MemberCellInfo *entity = [MemberCellInfo new];
-    entity.name = @"小六";
-    MemberCellInfo *entity2 = [MemberCellInfo new];
-    entity2.name = @"小liu";
-    self.searchResultsController.content = @[entity,entity2];
-    
-}
 #pragma mark - User Even
 - (IBAction)reloadTableViewBntTap:(SBButton *)sender {
     
@@ -160,23 +162,23 @@ static NSString *FileCell = @"fileCellID";
     NSTableCellView *cell = nil;
     switch (self.cellType) {
         case 1:
-            [self configureMemberCell:tableView WithcellID:MemberCell row:row];
+//            [self configureMemberCell:tableView WithcellID:MemberCell row:row];
             break;
-        case 2:
-            [self configureBusinessCell:tableView WithcellID:BusinessCell row:row];
-            break;
-        case 3:
-            [self configureScheduleCell:tableView WithcellID:ScheduleCell row:row];
-            break;
-        case 4:
-            [self configureNotesCell:tableView WithcellID:NotesCell row:row];
-            break;
-        case 5:
-            [self configureInformationCell:tableView WithcellID:InformationCell row:row];
-            break;
-        case 6:
-            [self configureFileCell:tableView WithcellID:FileCell row:row];
-            break;
+//        case 2:
+//            [self configureBusinessCell:tableView WithcellID:BusinessCell row:row];
+//            break;
+//        case 3:
+//            [self configureScheduleCell:tableView WithcellID:ScheduleCell row:row];
+//            break;
+//        case 4:
+//            [self configureNotesCell:tableView WithcellID:NotesCell row:row];
+//            break;
+//        case 5:
+//            [self configureInformationCell:tableView WithcellID:InformationCell row:row];
+//            break;
+//        case 6:
+//            [self configureFileCell:tableView WithcellID:FileCell row:row];
+//            break;
         default:
             return nil;
             break;
@@ -304,19 +306,34 @@ static NSString *FileCell = @"fileCellID";
 #pragma mark - NSTextFieldDelegate
 - (void)controlTextDidChange:(NSNotification *)obj {
     if (obj.object == self.searchBarText && self.searchBarText.stringValue.length != 0) {
-        //configure text change
+        [self setWindowSize:NSMakeSize(480.f, 400.f)];
         
-//        self
+    } else {
+        [self setWindowSize:NSMakeSize(480.f, 60.f)];
     }
 }
 
-#pragma mark - String Tool
+#pragma mark - Tool
 - (void)originalTextField:(NSTextField*)orgTextField targetString:(NSString*)tarString setColor:(NSColor*)color {
     NSRange range = [orgTextField.stringValue rangeOfString:tarString];
     NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:orgTextField.stringValue];
     NSDictionary *attrsDictionary  = [NSDictionary dictionaryWithObjectsAndKeys:[NSColor redColor], NSForegroundColorAttributeName, nil];
     [attrStr addAttributes:attrsDictionary range:range];
     [orgTextField setAttributedStringValue:attrStr];
+}
+
+- (void)setWindowSize:(NSSize)size {
+    NSRect originalFrame = [self.view.window frame];
+    NSSize originalSize = originalFrame.size;
+    NSPoint originalPoint = originalFrame.origin;
+    
+    CGFloat newWidth = size.width;
+    CGFloat newHight = size.height;
+    
+    CGFloat newX = originalPoint.x;
+    CGFloat newY = originalPoint.y + (originalSize.height - newHight);
+
+    [self.view.window setFrame:NSMakeRect(newX, newY, newWidth, newHight) display:YES animate:YES];
 }
 
 - (void)dealloc {

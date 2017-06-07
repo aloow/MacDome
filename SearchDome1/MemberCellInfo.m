@@ -10,6 +10,15 @@
 
 @implementation MemberCellInfo
 
+-(instancetype)initWithDict:(NSDictionary *)dict{
+    if (self == [super init]) {
+        self.name = dict[@"name"];
+        self.headIconUrl = dict[@"headIconUrl"];
+        self.fileIconUrl = dict[@"fileIconUrl"];
+    }
+    return self;
+}
+
 - (void)dealloc {
     [self.name release];
     [self.headIconUrl release];

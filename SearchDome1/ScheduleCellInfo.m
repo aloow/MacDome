@@ -10,6 +10,14 @@
 
 @implementation ScheduleCellInfo
 
+-(instancetype)initWithDict:(NSDictionary *)dict{
+    if (self == [super init]) {
+        self.schedule = dict[@"schedule"];
+        self.dayTime = dict[@"dayTime"];
+    }
+    return self;
+}
+
 - (void)dealloc {
     [self.schedule release];
     [self.dayTime release];

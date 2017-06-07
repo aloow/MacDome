@@ -10,6 +10,13 @@
 
 @implementation NotesCellInfo
 
+-(instancetype)initWithDict:(NSDictionary *)dict{
+    if (self == [super init]) {
+        self.notes = dict[@"notes"];
+    }
+    return self;
+}
+
 - (void)dealloc {
     [self.notes release];
     [super dealloc];
