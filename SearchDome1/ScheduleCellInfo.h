@@ -13,4 +13,5 @@
 @property (retain) NSString *schedule;
 @property (retain) NSString *dayTime;
 
+-(instancetype)initWithDict:(NSDictionary *)dict;
 @end

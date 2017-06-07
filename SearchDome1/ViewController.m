@@ -78,44 +78,58 @@ static NSString *FileCell = @"fileCellID";
 }
 #pragma mark - UI & Data
 - (void)getDataFromType:(CellType)cellType {
-//    [[MemberCellInfo alloc] initWithDict:@{@"name":@"",@"headIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"fileIconUrl":@""}];
-//    switch (cellType) {
-//        case MemberTap:
-//            MemberCellInfo *entity = [MemberCellInfo
-//            break;
-//        case BusinessTap:
-//            
-//            break;
-//        case ScheduleTap:
-//            
-//            break;
-//        case NotesTap:
-//            
-//            break;
-//        case InformationTap:
-//            
-//            break;
-//        case FileTap:
-//            
-//            break;
-//        default:
-//            break;
-//    }
+    if (!self.tableviewCellArray) {
+        self.tableviewCellArray = [NSMutableArray array];
+    } else {
+        [self.tableviewCellArray removeAllObjects];
+    }
     
+    switch (cellType) {
+        case MemberTap:
+            for (int i = 0; i < 10; i ++) {
+                [self.tableviewCellArray addObject:[[MemberCellInfo alloc] initWithDict:@{@"name":@"小五小三0123456789",@"headIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"fileIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740621n.jpg"}]];
+            }
+            break;
+        case BusinessTap:
+            for (int i = 0; i < 14; i ++) {
+                [self.tableviewCellArray addObject:[[BusinessCellInfo alloc] initWithDict:@{@"progressType":@"进",@"department":@"[周报][产品中心][产品部]",@"date":@"(2月3日-2月4日)",@"name":@"小五小",@"fileIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"chargeName":@"王大锤",@"detailsTime":@"05-12 18:00"}]];
+            }
+            break;
+        case ScheduleTap:
+            for (int i = 0; i < 5; i ++) {
+                [self.tableviewCellArray addObject:[[ScheduleCellInfo alloc] initWithDict:@{@"schedule":@"小五更新浏览器、电脑版本内测包",@"dayTime":@"18:00"}]];
+            }
+            break;
+        case NotesTap:
+            for (int i = 0; i < 20; i ++) {
+                [self.tableviewCellArray addObject:[[NotesCellInfo alloc] initWithDict:@{@"notes":@"小五更新浏览器、电脑版本内测包"}]];
+            }
+            break;
+        case InformationTap:
+            for (int i = 0; i < 15; i ++) {
+                [self.tableviewCellArray addObject:[[InformationCellInfo alloc] initWithDict:@{@"information":@"小五更新浏览器、电脑版本内测包",@"fileIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"name":@"李小白",@"detailsTime":@"02-12 18:00"}]];
+            }
+            break;
+        case FileTap:
+            for (int i = 0; i < 10; i ++) {
+                [self.tableviewCellArray addObject:[[FileCellInfo alloc] initWithDict:@{@"fileIconUrl":@"https://www.google.co.jp/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi3g9yrw6vUAhVJGJQKHUbQC1kQjRwIBw&url=http%3A%2F%2Fwww.zhuantilan.com%2Fandroid%2F69597.html&psig=AFQjCNEmPEwJZ9CHrxfUIfaR6zbKaXpKQg&ust=1496917756477173",@"fileName":@"18:00",@"detailsTime":@"02-12 18:00"}]];
+            }
+            break;
+        default:
+            break;
+    }
+    [self.tableView reloadData];
 }
 
 - (void)setupUI {
-
     [self setWindowSize:NSMakeSize(480.f, 60.f)];
     self.searchBarText.delegate = self;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.identifier = MemberCell;
     self.cellType = 1;
-    //searchContainView border shadow
     _searchBarText.delegate = self;
     [_searchBarText setFocusRingType:NSFocusRingTypeNone];
-    //
 }
 
 #pragma mark - User Even
@@ -163,11 +177,11 @@ static NSString *FileCell = @"fileCellID";
             break;
     }
     [sender setColor:[NSColor colorWithCGColor:CGColorCreateGenericRGB(255.0/255, 152.0/255, 25.0/255, 1.f)]];
-    [self.tableView reloadData];
+    [self getDataFromType:self.cellType];
 }
 #pragma mark - NSTableViewDataSource
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return 10;
+    return self.tableviewCellArray.count;
 }
 
 #pragma mark - NSTableViewDelegate
@@ -179,23 +193,23 @@ static NSString *FileCell = @"fileCellID";
     NSTableCellView *cell = nil;
     switch (self.cellType) {
         case 1:
-//            [self configureMemberCell:tableView WithcellID:MemberCell row:row];
+            cell = [self configureMemberCell:tableView WithcellID:MemberCell row:row];
             break;
-//        case 2:
-//            [self configureBusinessCell:tableView WithcellID:BusinessCell row:row];
-//            break;
-//        case 3:
-//            [self configureScheduleCell:tableView WithcellID:ScheduleCell row:row];
-//            break;
-//        case 4:
-//            [self configureNotesCell:tableView WithcellID:NotesCell row:row];
-//            break;
-//        case 5:
-//            [self configureInformationCell:tableView WithcellID:InformationCell row:row];
-//            break;
-//        case 6:
-//            [self configureFileCell:tableView WithcellID:FileCell row:row];
-//            break;
+        case 2:
+            cell = [self configureBusinessCell:tableView WithcellID:BusinessCell row:row];
+            break;
+        case 3:
+            cell = [self configureScheduleCell:tableView WithcellID:ScheduleCell row:row];
+            break;
+        case 4:
+            cell = [self configureNotesCell:tableView WithcellID:NotesCell row:row];
+            break;
+        case 5:
+            cell = [self configureInformationCell:tableView WithcellID:InformationCell row:row];
+            break;
+        case 6:
+            cell = [self configureFileCell:tableView WithcellID:FileCell row:row];
+            break;
         default:
             return nil;
             break;
@@ -325,10 +339,10 @@ static NSString *FileCell = @"fileCellID";
     if (obj.object == self.searchBarText && self.searchBarText.stringValue.length != 0) {
         [self setWindowSize:NSMakeSize(480.f, 400.f)];
         //get Date & reflush tableview
-        
-        
+        [self getDataFromType:self.cellType];
     } else {
         [self setWindowSize:NSMakeSize(480.f, 60.f)];
+        [self.tableviewCellArray removeAllObjects];
     }
 }
 

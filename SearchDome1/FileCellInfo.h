@@ -16,4 +16,5 @@
 //@property (retain) NSString *dateTime;
 //@property (retain) NSString *dayTime;
 
+-(instancetype)initWithDict:(NSDictionary *)dict;
 @end

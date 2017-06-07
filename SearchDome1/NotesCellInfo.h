@@ -12,4 +12,5 @@
 
 @property (retain) NSString *notes;
 
+-(instancetype)initWithDict:(NSDictionary *)dict;
 @end

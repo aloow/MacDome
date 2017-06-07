@@ -1207,13 +1207,11 @@
                         <outlet property="scheduleBnt" destination="uCM-ss-d6y" id="JDP-4A-9ku"/>
                         <outlet property="scheduleLine" destination="4rr-c3-shb" id="21D-Uz-fEg"/>
                         <outlet property="searchBarText" destination="VG5-Vi-Qyk" id="pdV-9d-TOv"/>
-                        <outlet property="searchResultsController" destination="xHV-Ye-7hl" id="AoN-ay-MtS"/>
                         <outlet property="seatchContainBox" destination="Egi-Qw-2qF" id="hR1-7O-S5D"/>
                         <outlet property="tableView" destination="h30-FI-cdj" id="bzh-cG-WeO"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController id="xHV-Ye-7hl"/>
             </objects>
             <point key="canvasLocation" x="75" y="701"/>
         </scene>
