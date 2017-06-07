@@ -16,7 +16,7 @@
 #import "InformationCellInfo.h"
 #import "FileCellInfo.h"
 
-typedef NS_ENUM(NSUInteger, TTGState) {
+typedef NS_ENUM(NSUInteger, CellType) {
     MemberTap = 1,
     BusinessTap,
     ScheduleTap,
@@ -55,7 +55,7 @@ static NSString *FileCell = @"fileCellID";
 @property (assign) IBOutlet NSBox *fileLine;
 
 //@property (assign) NSString *cellIdentifier;
-@property (assign) TTGState cellType;
+@property (assign) CellType cellType;
 @property (retain) NSMutableArray *tableviewCellArray;
 @property (assign) IBOutlet NSArrayController *searchResultsController;
 
@@ -65,7 +65,6 @@ static NSString *FileCell = @"fileCellID";
 #pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupData];
 }
 
 - (void)viewWillAppear {
@@ -78,12 +77,30 @@ static NSString *FileCell = @"fileCellID";
     // Update the view, if already loaded.
 }
 #pragma mark - UI & Data
-- (void)setupData {
-    MemberCellInfo *entity = [MemberCellInfo new];
-    entity.name = @"小六";
-    MemberCellInfo *entity2 = [MemberCellInfo new];
-    entity2.name = @"小liu";
-    self.searchResultsController.content = @[entity,entity2];
+- (void)getDataFromType:(CellType)cellType {
+//    [[MemberCellInfo alloc] initWithDict:@{@"name":@"",@"headIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"fileIconUrl":@""}];
+//    switch (cellType) {
+//        case MemberTap:
+//            MemberCellInfo *entity = [MemberCellInfo
+//            break;
+//        case BusinessTap:
+//            
+//            break;
+//        case ScheduleTap:
+//            
+//            break;
+//        case NotesTap:
+//            
+//            break;
+//        case InformationTap:
+//            
+//            break;
+//        case FileTap:
+//            
+//            break;
+//        default:
+//            break;
+//    }
     
 }
 
@@ -307,6 +324,8 @@ static NSString *FileCell = @"fileCellID";
 - (void)controlTextDidChange:(NSNotification *)obj {
     if (obj.object == self.searchBarText && self.searchBarText.stringValue.length != 0) {
         [self setWindowSize:NSMakeSize(480.f, 400.f)];
+        //get Date & reflush tableview
+        
         
     } else {
         [self setWindowSize:NSMakeSize(480.f, 60.f)];

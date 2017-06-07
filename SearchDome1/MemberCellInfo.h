@@ -14,4 +14,5 @@
 @property (assign) NSString *headIconUrl;
 @property (assign) NSString *fileIconUrl;
 
+-(instancetype)initWithDict:(NSDictionary *)dict;
 @end
