@@ -15,6 +15,8 @@
 #import "NotesCellInfo.h"
 #import "InformationCellInfo.h"
 #import "FileCellInfo.h"
+#import "MemberHeaderCellInfo.h"
+#import "ScheduleHeaderCellInfo.h"
 
 typedef NS_ENUM(NSUInteger, CellType) {
     MemberTap = 1,
@@ -31,6 +33,8 @@ static NSString *ScheduleCell = @"scheduleCellID";
 static NSString *NotesCell = @"notesCellID";
 static NSString *InformationCell = @"informationCellID";
 static NSString *FileCell = @"fileCellID";
+static NSString *MemberHeaderCell = @"memberHeaderCellID";
+static NSString *ScheduleHeader = @"scheduleHeaderCellID";
 
 @interface ViewController()<NSTextFieldDelegate,NSTableViewDelegate,NSTableViewDataSource>
 @property (assign) IBOutlet NSBox *seatchContainBox;
@@ -55,10 +59,8 @@ static NSString *FileCell = @"fileCellID";
 @property (assign) IBOutlet NSBox *informationLine;
 @property (assign) IBOutlet NSBox *fileLine;
 
-//@property (assign) NSString *cellIdentifier;
 @property (assign) CellType cellType;
 @property (retain) NSMutableArray *tableviewCellArray;
-@property (assign) IBOutlet NSArrayController *searchResultsController;
 
 @end
 
@@ -87,8 +89,17 @@ static NSString *FileCell = @"fileCellID";
     
     switch (cellType) {
         case MemberTap:
-            for (int i = 0; i < 4; i ++) {
+            for (int i = 0; i < 10; i ++) {
+                if (i == 0) {
+                    [self.tableviewCellArray addObject:[[MemberHeaderCellInfo alloc] initWithDict:@{@"type":@"成员"}]];
+                    continue;
+                }
+                if (i == 5) {
+                    [self.tableviewCellArray addObject:[[MemberHeaderCellInfo alloc] initWithDict:@{@"type":@"群聊"}]];
+                    continue;
+                }
                 [self.tableviewCellArray addObject:[[MemberCellInfo alloc] initWithDict:@{@"name":@"小五小三0123456789",@"headIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"fileIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740621n.jpg"}]];
+                
             }
             break;
         case BusinessTap:
@@ -97,7 +108,19 @@ static NSString *FileCell = @"fileCellID";
             }
             break;
         case ScheduleTap:
-            for (int i = 0; i < 5; i ++) {
+            for (int i = 0; i < 20; i ++) {
+                if (i == 0) {
+                    [self.tableviewCellArray addObject:[[ScheduleHeaderCellInfo alloc] initWithDict:@{@"time":@"02-15",@"day":@"周一",@"dateTime":@"正月十九"}]];
+                    continue;
+                }
+                if (i == 4) {
+                    [self.tableviewCellArray addObject:[[ScheduleHeaderCellInfo alloc] initWithDict:@{@"time":@"08-15",@"day":@"周日",@"dateTime":@"三月十九"}]];
+                    continue;
+                }
+                if (i == 9) {
+                    [self.tableviewCellArray addObject:[[ScheduleHeaderCellInfo alloc] initWithDict:@{@"time":@"07-15",@"day":@"周一",@"dateTime":@"四月十九"}]];
+                    continue;
+                }
                 [self.tableviewCellArray addObject:[[ScheduleCellInfo alloc] initWithDict:@{@"schedule":@"小五更新浏览器、电脑版本内测包",@"dayTime":@"18:00"}]];
             }
             break;
@@ -187,9 +210,6 @@ static NSString *FileCell = @"fileCellID";
 
 #pragma mark - NSTableViewDelegate
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    /**
-     个别cell显示section问题，根据model中类型判断返回cellIdentifier
-     **/
     
     NSTableCellView *cell = nil;
     switch (self.cellType) {
@@ -224,11 +244,30 @@ static NSString *FileCell = @"fileCellID";
     return cell;
 }
 
+- (BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
+    if ([self.tableviewCellArray[row] isKindOfClass:[MemberHeaderCellInfo class]] || [self.tableviewCellArray[row] isKindOfClass:[ScheduleHeaderCellInfo class]]) {
+        return NO;
+    }
+    return YES;
+}
+
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     switch (self.cellType) {
-        case 1: return 41.f; break;
+        case 1:
+            if ([self.tableviewCellArray[row] isKindOfClass:[MemberHeaderCellInfo class]]) {
+                return 23;
+            } else {
+                return 41.f;
+            }
+            break;
         case 2: return 45.f; break;
-        case 3: return 50.f; break;
+        case 3:
+            if ([self.tableviewCellArray[row] isKindOfClass:[ScheduleHeaderCellInfo class]]) {
+                return 23;
+            } else {
+                return 44.f;
+            }
+            break;
         case 4: return 33.f; break;
         case 5: return 53.f; break;
         case 6: return 49.f; break;
@@ -239,6 +278,15 @@ static NSString *FileCell = @"fileCellID";
 }
 #pragma mark - Configure Cell
 - (NSTableCellView *)configureMemberCell:(NSTableView*)tableView WithcellID:(NSString *)cellIdentifier row:(NSInteger)index{
+    
+    if ([self.tableviewCellArray[index] isKindOfClass:[MemberHeaderCellInfo class]]) {
+        NSTableCellView* cell = [tableView makeViewWithIdentifier:MemberHeaderCell owner:self];
+        MemberHeaderCellInfo *entity = self.tableviewCellArray[index];
+        NSTextField *type = [cell viewWithTag:101];
+        type.stringValue = entity.type;
+        return cell;
+    }
+    
     NSTableCellView* cell = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
     MemberCellInfo *entity = self.tableviewCellArray[index];
     
@@ -283,6 +331,22 @@ static NSString *FileCell = @"fileCellID";
 }
 
 - (NSTableCellView *)configureScheduleCell:(NSTableView*)tableView WithcellID:(NSString *)cellIdentifier row:(NSInteger)index{
+    
+    if ([self.tableviewCellArray[index] isKindOfClass:[ScheduleHeaderCellInfo class]]) {
+        NSTableCellView* cell = [tableView makeViewWithIdentifier:ScheduleHeader owner:self];
+        ScheduleHeaderCellInfo *entity = self.tableviewCellArray[index];
+        
+        NSTextField *time = [cell viewWithTag:101];
+        time.stringValue = entity.time;
+        
+        NSTextField *day = [cell viewWithTag:102];
+        day.stringValue = entity.day;
+        
+        NSTextField *dateTime = [cell viewWithTag:103];
+        dateTime.stringValue = entity.dateTime;
+        return cell;
+    }
+    
     NSTableCellView* cell = [tableView makeViewWithIdentifier:cellIdentifier owner:self];
     ScheduleCellInfo *entity = self.tableviewCellArray[index];
     

@@ -1,5 +1,5 @@
 //
-//  MemberCellInfo.h
+//  ScheduleHeaderCellInfo.h
 //  SearchDome1
 //
 //  Created by shaoqing on 2017/6/8.
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MemberCellInfo : NSObject
+@interface ScheduleHeaderCellInfo : NSObject
 
-@property (retain) NSString *name;
-@property (assign) NSString *headIconUrl;
-@property (assign) NSString *fileIconUrl;
+@property (retain) NSString *time;
+@property (assign) NSString *day;
+@property (assign) NSString *dateTime;
 
 -(instancetype)initWithDict:(NSDictionary *)dict;
 @end

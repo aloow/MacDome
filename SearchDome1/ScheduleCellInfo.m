@@ -19,6 +19,7 @@
 }
 
 - (void)dealloc {
+    [self.type release];
     [self.schedule release];
     [self.dayTime release];
     [super dealloc];

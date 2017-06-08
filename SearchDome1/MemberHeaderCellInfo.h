@@ -1,5 +1,5 @@
 //
-//  MemberCellInfo.h
+//  MemberHeaderCellInfo.h
 //  SearchDome1
 //
 //  Created by shaoqing on 2017/6/8.
@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MemberCellInfo : NSObject
+@interface MemberHeaderCellInfo : NSObject
 
-@property (retain) NSString *name;
-@property (assign) NSString *headIconUrl;
-@property (assign) NSString *fileIconUrl;
+@property (retain) NSString *type;
 
 -(instancetype)initWithDict:(NSDictionary *)dict;
+
 @end

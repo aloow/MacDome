@@ -2,7 +2,7 @@
 //  MemberCellInfo.m
 //  SearchDome1
 //
-//  Created by shaoqing on 2017/6/7.
+//  Created by shaoqing on 2017/6/8.
 //  Copyright © 2017年 shaoqing. All rights reserved.
 //
 
@@ -25,5 +25,4 @@
     [self.fileIconUrl release];
     [super dealloc];
 }
-
 @end

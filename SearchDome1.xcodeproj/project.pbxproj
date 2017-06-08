@@ -15,12 +15,14 @@
 		9793ADE81EE53D990080E527 /* MyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADE71EE53D990080E527 /* MyWindow.m */; };
 		9793ADEB1EE569930080E527 /* SBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADEA1EE569930080E527 /* SBButton.m */; };
 		9793ADED1EE69F260080E527 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9793ADEC1EE69F260080E527 /* MainMenu.xib */; };
-		9793ADF21EE79A680080E527 /* MemberCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADF11EE79A680080E527 /* MemberCellInfo.m */; };
 		9793ADF51EE79A8C0080E527 /* BusinessCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADF41EE79A8C0080E527 /* BusinessCellInfo.m */; };
 		9793ADF81EE79AA70080E527 /* ScheduleCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADF71EE79AA70080E527 /* ScheduleCellInfo.m */; };
 		9793ADFB1EE79AC40080E527 /* NotesCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADFA1EE79AC40080E527 /* NotesCellInfo.m */; };
 		9793ADFE1EE79ADB0080E527 /* InformationCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793ADFD1EE79ADB0080E527 /* InformationCellInfo.m */; };
 		9793AE011EE79AF20080E527 /* FileCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793AE001EE79AF20080E527 /* FileCellInfo.m */; };
+		9793AE291EE933E60080E527 /* MemberCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793AE281EE933E60080E527 /* MemberCellInfo.m */; };
+		9793AE2C1EE934490080E527 /* MemberHeaderCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793AE2B1EE934490080E527 /* MemberHeaderCellInfo.m */; };
+		9793AE2F1EE934640080E527 /* ScheduleHeaderCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9793AE2E1EE934640080E527 /* ScheduleHeaderCellInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +40,6 @@
 		9793ADE91EE569930080E527 /* SBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBButton.h; sourceTree = "<group>"; };
 		9793ADEA1EE569930080E527 /* SBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBButton.m; sourceTree = "<group>"; };
 		9793ADEC1EE69F260080E527 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		9793ADF01EE79A680080E527 /* MemberCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCellInfo.h; sourceTree = "<group>"; };
-		9793ADF11EE79A680080E527 /* MemberCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCellInfo.m; sourceTree = "<group>"; };
 		9793ADF31EE79A8C0080E527 /* BusinessCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCellInfo.h; sourceTree = "<group>"; };
 		9793ADF41EE79A8C0080E527 /* BusinessCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCellInfo.m; sourceTree = "<group>"; };
 		9793ADF61EE79AA70080E527 /* ScheduleCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCellInfo.h; sourceTree = "<group>"; };
@@ -50,6 +50,12 @@
 		9793ADFD1EE79ADB0080E527 /* InformationCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationCellInfo.m; sourceTree = "<group>"; };
 		9793ADFF1EE79AF20080E527 /* FileCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCellInfo.h; sourceTree = "<group>"; };
 		9793AE001EE79AF20080E527 /* FileCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCellInfo.m; sourceTree = "<group>"; };
+		9793AE271EE933E60080E527 /* MemberCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCellInfo.h; sourceTree = "<group>"; };
+		9793AE281EE933E60080E527 /* MemberCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCellInfo.m; sourceTree = "<group>"; };
+		9793AE2A1EE934490080E527 /* MemberHeaderCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberHeaderCellInfo.h; sourceTree = "<group>"; };
+		9793AE2B1EE934490080E527 /* MemberHeaderCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberHeaderCellInfo.m; sourceTree = "<group>"; };
+		9793AE2D1EE934640080E527 /* ScheduleHeaderCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleHeaderCellInfo.h; sourceTree = "<group>"; };
+		9793AE2E1EE934640080E527 /* ScheduleHeaderCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleHeaderCellInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +125,8 @@
 		9793ADEF1EE79A2A0080E527 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9793ADF01EE79A680080E527 /* MemberCellInfo.h */,
-				9793ADF11EE79A680080E527 /* MemberCellInfo.m */,
+				9793AE271EE933E60080E527 /* MemberCellInfo.h */,
+				9793AE281EE933E60080E527 /* MemberCellInfo.m */,
 				9793ADF31EE79A8C0080E527 /* BusinessCellInfo.h */,
 				9793ADF41EE79A8C0080E527 /* BusinessCellInfo.m */,
 				9793ADF61EE79AA70080E527 /* ScheduleCellInfo.h */,
@@ -131,6 +137,10 @@
 				9793ADFD1EE79ADB0080E527 /* InformationCellInfo.m */,
 				9793ADFF1EE79AF20080E527 /* FileCellInfo.h */,
 				9793AE001EE79AF20080E527 /* FileCellInfo.m */,
+				9793AE2A1EE934490080E527 /* MemberHeaderCellInfo.h */,
+				9793AE2B1EE934490080E527 /* MemberHeaderCellInfo.m */,
+				9793AE2D1EE934640080E527 /* ScheduleHeaderCellInfo.h */,
+				9793AE2E1EE934640080E527 /* ScheduleHeaderCellInfo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -207,11 +217,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9793ADF51EE79A8C0080E527 /* BusinessCellInfo.m in Sources */,
+				9793AE291EE933E60080E527 /* MemberCellInfo.m in Sources */,
+				9793AE2C1EE934490080E527 /* MemberHeaderCellInfo.m in Sources */,
 				9793ADDA1EE53BF00080E527 /* ViewController.m in Sources */,
 				9793ADD71EE53BF00080E527 /* main.m in Sources */,
 				9793AE011EE79AF20080E527 /* FileCellInfo.m in Sources */,
+				9793AE2F1EE934640080E527 /* ScheduleHeaderCellInfo.m in Sources */,
 				9793ADD41EE53BF00080E527 /* AppDelegate.m in Sources */,
-				9793ADF21EE79A680080E527 /* MemberCellInfo.m in Sources */,
 				9793ADEB1EE569930080E527 /* SBButton.m in Sources */,
 				9793ADFB1EE79AC40080E527 /* NotesCellInfo.m in Sources */,
 				9793ADF81EE79AA70080E527 /* ScheduleCellInfo.m in Sources */,

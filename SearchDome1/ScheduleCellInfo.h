@@ -10,6 +10,7 @@
 
 @interface ScheduleCellInfo : NSObject
 
+@property (retain) NSString *type; //时间 几月几号
 @property (retain) NSString *schedule;
 @property (retain) NSString *dayTime;
 
