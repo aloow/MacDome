@@ -39,6 +39,7 @@ static NSString *FileCell = @"fileCellID";
 @property (assign) IBOutlet NSTextField *searchBarText;
 
 @property (assign) IBOutlet NSBox *cellContainView;
+@property (assign) IBOutlet NSTextField *promptLabel;
 
 @property (assign) IBOutlet SBButton *memberBnt;
 @property (assign) IBOutlet SBButton *businessBnt;
@@ -112,7 +113,7 @@ static NSString *FileCell = @"fileCellID";
             break;
         case FileTap:
             for (int i = 0; i < 5; i ++) {
-                [self.tableviewCellArray addObject:[[FileCellInfo alloc] initWithDict:@{@"fileIconUrl":@"https://www.google.co.jp/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi3g9yrw6vUAhVJGJQKHUbQC1kQjRwIBw&url=http%3A%2F%2Fwww.zhuantilan.com%2Fandroid%2F69597.html&psig=AFQjCNEmPEwJZ9CHrxfUIfaR6zbKaXpKQg&ust=1496917756477173",@"fileName":@"18:00",@"detailsTime":@"02-12 18:00"}]];
+                [self.tableviewCellArray addObject:[[FileCellInfo alloc] initWithDict:@{@"fileIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"detailsTime":@"02-12 18:00",@"fileName":@"小文件夹"}]];
             }
             break;
         default:
@@ -330,7 +331,7 @@ static NSString *FileCell = @"fileCellID";
     NSTextField *fileName = [cell viewWithTag:102];
     fileName.stringValue = entity.fileName;
     
-    NSTextField *detailsTime = [cell viewWithTag:102];
+    NSTextField *detailsTime = [cell viewWithTag:103];
     detailsTime.stringValue = entity.detailsTime;
     return cell;
 }
@@ -347,6 +348,52 @@ static NSString *FileCell = @"fileCellID";
     }
 }
 
+- (BOOL)control:(NSControl*)control textView:(NSTextView*)textView doCommandBySelector:(SEL)commandSelector
+{
+    BOOL result = NO;
+    if (self.tableviewCellArray.count == 0) return NO;
+    
+    if (commandSelector == @selector(insertNewline:))
+    {
+        // new line action:
+        NSLog(@"Return tap");
+//        [textView insertNewlineIgnoringFieldEditor:self];
+        result = YES;
+    }
+    else if (commandSelector == @selector(insertTab:))
+    {
+        // tab action:
+        self.cellType = self.cellType < 6 ? self.cellType + 1 : 1;
+        switch (self.cellType) {
+            case 1: [self reloadTableViewBntTap:self.memberBnt];     break;
+            case 2: [self reloadTableViewBntTap:self.businessBnt];   break;
+            case 3: [self reloadTableViewBntTap:self.scheduleBnt];   break;
+            case 4: [self reloadTableViewBntTap:self.notesBnt];      break;
+            case 5: [self reloadTableViewBntTap:self.informationBnt];break;
+            case 6: [self reloadTableViewBntTap:self.fileBnt];       break;
+            default:
+                break;
+        }
+//        [textView insertTabIgnoringFieldEditor:self];
+        result = YES;
+    }
+    if( commandSelector == @selector(moveUp:) ){
+        
+        NSInteger newInteger = [self.tableView selectedRow] == 0 ? 0: [self.tableView selectedRow] - 1;
+        NSIndexSet *newIndexSet = [NSIndexSet indexSetWithIndex:newInteger];
+        [self.tableView selectRowIndexes:newIndexSet byExtendingSelection:NO];
+        result = YES;
+    }
+    if( commandSelector == @selector(moveDown:) ){
+        
+        NSInteger newInteger = [self.tableView selectedRow] < (NSInteger)self.tableviewCellArray.count ? [self.tableView selectedRow] + 1: [self.tableView selectedRow];
+        NSIndexSet *newIndexSet = [NSIndexSet indexSetWithIndex:newInteger];
+        [self.tableView selectRowIndexes:newIndexSet byExtendingSelection:NO];
+        
+        result = YES;
+    }
+    return result;
+}
 #pragma mark - Tool
 - (void)originalTextField:(NSTextField*)orgTextField targetString:(NSString*)tarString setColor:(NSColor*)color {
     NSRange range = [orgTextField.stringValue rangeOfString:tarString];
@@ -370,6 +417,7 @@ static NSString *FileCell = @"fileCellID";
     [self.view.window setFrame:NSMakeRect(newX, newY, newWidth, newHight) display:YES animate:YES];
 }
 
+#pragma mark - dealloc
 - (void)dealloc {
     [self.tableviewCellArray release];
     [super dealloc];

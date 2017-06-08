@@ -831,10 +831,18 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="106" translatesAutoresizingMaskIntoConstraints="NO" id="2wD-Db-Dtn" customClass="SBButton">
-                                            <rect key="frame" x="369" y="6" width="43" height="22"/>
+                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="43K-3a-Ijp">
+                                            <rect key="frame" x="378" y="1" width="35" height="3"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="bevel" title="文件" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="zh5-HB-naw">
+                                            <view key="contentView" ambiguous="YES" id="0P6-Zq-ppD">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="3"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                        </box>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="106" translatesAutoresizingMaskIntoConstraints="NO" id="exm-qn-GaA" customClass="SBButton">
+                                            <rect key="frame" x="374" y="3" width="43" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="bevel" title="文件" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="IHD-hA-95C">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" size="19" name=".PingFangSC-Semibold"/>
                                             </buttonCell>
@@ -845,17 +853,9 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="reloadTableViewBntTap:" target="XfG-lQ-9wD" id="bM2-vN-jg8"/>
+                                                <action selector="reloadTableViewBntTap:" target="XfG-lQ-9wD" id="Eew-Ii-hd7"/>
                                             </connections>
                                         </button>
-                                        <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="43K-3a-Ijp">
-                                            <rect key="frame" x="373" y="2" width="35" height="3"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <view key="contentView" ambiguous="YES" id="0P6-Zq-ppD">
-                                                <rect key="frame" x="0.0" y="0.0" width="35" height="3"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                        </box>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -899,7 +899,7 @@
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="102" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMU-qB-xem">
                                                                     <rect key="frame" x="59" y="8" width="372" height="22"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Mp8-OZ-cSx">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="member name" id="Mp8-OZ-cSx">
                                                                         <font key="font" size="17" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -935,27 +935,27 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="102" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buo-ae-SZ9">
-                                                                    <rect key="frame" x="34" y="25" width="151" height="17"/>
+                                                                    <rect key="frame" x="43" y="25" width="180" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="[周报][产品中心][产品部]" id="CZT-Jy-DL7">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="things" id="CZT-Jy-DL7">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="103" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me3-40-0eg">
-                                                                    <rect key="frame" x="199" y="25" width="107" height="17"/>
+                                                                    <rect key="frame" x="227" y="25" width="162" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(2月3日-2月4日)" id="bv5-dT-qhh">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="time - time" id="bv5-dT-qhh">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="104" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfI-mv-aya">
-                                                                    <rect key="frame" x="321" y="25" width="31" height="17"/>
+                                                                    <rect key="frame" x="393" y="25" width="68" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="小五" id="bie-P3-hNr">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="full name" id="bie-P3-hNr">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -967,19 +967,10 @@
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HeadImage" id="pTS-c1-76a"/>
                                                                 </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="106" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZW0-MG-lwI">
-                                                                    <rect key="frame" x="69" y="5" width="44" height="17"/>
+                                                                    <rect key="frame" x="69" y="5" width="92" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="王大锤" id="qF5-sP-mis">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="full name" id="qF5-sP-mis">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="107" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-yp-TwY">
-                                                                    <rect key="frame" x="125" y="6" width="80" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="05-12 18:00" id="dmI-ZO-GDK">
-                                                                        <font key="font" size="12" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -993,6 +984,15 @@
                                                                     </view>
                                                                     <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="107" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-yp-TwY">
+                                                                    <rect key="frame" x="165" y="5" width="115" height="17"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="daily time" id="dmI-ZO-GDK">
+                                                                        <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
                                                             </subviews>
                                                         </tableCellView>
                                                         <tableCellView identifier="scheduleCellID" id="wwp-xs-SqV">
@@ -1000,18 +1000,18 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="102" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfc-Ld-IXh">
-                                                                    <rect key="frame" x="36" y="5" width="80" height="17"/>
+                                                                    <rect key="frame" x="36" y="5" width="195" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="19:00-20:00" id="MZl-P3-aiq">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="day time" id="MZl-P3-aiq">
                                                                         <font key="font" size="12" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="101" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swr-y7-Y8K">
-                                                                    <rect key="frame" x="32" y="24" width="190" height="17"/>
+                                                                    <rect key="frame" x="32" y="24" width="429" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="小五更新浏览器、电脑版内测包" id="upj-m1-47M">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="things" id="upj-m1-47M">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1033,9 +1033,9 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="101" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-D9-XCR">
-                                                                    <rect key="frame" x="16" y="12" width="190" height="17"/>
+                                                                    <rect key="frame" x="16" y="12" width="445" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="小五更新浏览器、电脑版内测包" id="pE5-3F-vAH">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="things" id="pE5-3F-vAH">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1057,9 +1057,9 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="101" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCK-8g-SHt">
-                                                                    <rect key="frame" x="19" y="33" width="190" height="17"/>
+                                                                    <rect key="frame" x="19" y="33" width="432" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="小五更新浏览器、电脑版内测包" id="c8C-4U-Nu1">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="things" id="c8C-4U-Nu1">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1070,19 +1070,10 @@
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HeadImage" id="Bs6-Bs-HuP"/>
                                                                 </imageView>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="103" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ise-R0-SG1">
-                                                                    <rect key="frame" x="53" y="12" width="44" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="王大锤" id="X6t-WH-byy">
-                                                                        <font key="font" size="12" name=".PingFangSC-Regular"/>
-                                                                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="104" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8n-c7-oXm">
-                                                                    <rect key="frame" x="108" y="12" width="80" height="17"/>
+                                                                    <rect key="frame" x="167" y="12" width="119" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="05-12 18:00" id="ZNM-hx-jec">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="daily time" id="ZNM-hx-jec">
                                                                         <font key="font" size="12" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1097,6 +1088,15 @@
                                                                     </view>
                                                                     <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="103" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ise-R0-SG1">
+                                                                    <rect key="frame" x="58" y="12" width="92" height="17"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="full name" id="X6t-WH-byy">
+                                                                        <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                                                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
                                                             </subviews>
                                                         </tableCellView>
                                                         <tableCellView identifier="fileCellID" id="xRc-dv-uNd">
@@ -1113,18 +1113,18 @@
                                                                     <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="102" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zns-wH-7Tc">
-                                                                    <rect key="frame" x="56" y="29" width="58" height="17"/>
+                                                                    <rect key="frame" x="56" y="29" width="405" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="小文件夹" id="372-OS-9Qn">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="file name" id="372-OS-9Qn">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="103" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49O-f9-Z6A">
-                                                                    <rect key="frame" x="56" y="9" width="75" height="17"/>
+                                                                    <rect key="frame" x="56" y="9" width="405" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="4-15 20:40" id="e5I-vn-Cgy">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="daily time" id="e5I-vn-Cgy">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1182,6 +1182,15 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="searchIcon" id="lBT-Vs-0gg"/>
                                         </imageView>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URU-jr-9rN">
+                                            <rect key="frame" x="260" y="17" width="202" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="-按Enter使用浏览器搜索" id="zIC-Wh-Yyg">
+                                                <font key="font" metaFont="system" size="18"/>
+                                                <color key="textColor" name="secondarySelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                 </view>
                                 <shadow key="shadow" blurRadius="2">
@@ -1195,7 +1204,7 @@
                         <outlet property="businessBnt" destination="E5j-ia-HZZ" id="gad-I1-Kwb"/>
                         <outlet property="businessLine" destination="qrZ-er-5E3" id="zL8-8R-bxQ"/>
                         <outlet property="cellContainView" destination="GDO-1x-qJF" id="KfX-MG-S0Z"/>
-                        <outlet property="fileBnt" destination="2wD-Db-Dtn" id="wve-BV-z41"/>
+                        <outlet property="fileBnt" destination="exm-qn-GaA" id="Sri-WW-WeJ"/>
                         <outlet property="fileLine" destination="43K-3a-Ijp" id="h1V-Aq-2fI"/>
                         <outlet property="informationBnt" destination="cY4-wY-d04" id="gQ3-Uj-OJh"/>
                         <outlet property="informationLine" destination="9Ks-XD-M8G" id="1JB-vd-5w6"/>
@@ -1203,6 +1212,7 @@
                         <outlet property="memberLine" destination="PbQ-h2-zif" id="16Z-cE-l68"/>
                         <outlet property="notesBnt" destination="Xcg-hF-qbL" id="DsX-MS-B5w"/>
                         <outlet property="notesLine" destination="KQ2-AA-rnH" id="7vC-ix-RHz"/>
+                        <outlet property="promptLabel" destination="URU-jr-9rN" id="gQ4-KN-Tzb"/>
                         <outlet property="scheduleBnt" destination="uCM-ss-d6y" id="JDP-4A-9ku"/>
                         <outlet property="scheduleLine" destination="4rr-c3-shb" id="21D-Uz-fEg"/>
                         <outlet property="searchBarText" destination="VG5-Vi-Qyk" id="pdV-9d-TOv"/>
