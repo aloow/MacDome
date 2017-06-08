@@ -706,7 +706,7 @@
                                             <color key="fillColor" red="0.99607843137254903" green="0.87058823529411766" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-mE-gtu" customClass="SBButton">
-                                            <rect key="frame" x="33" y="5" width="40" height="24"/>
+                                            <rect key="frame" x="20" y="3" width="40" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="成员" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="7OT-fB-xMS">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -723,16 +723,16 @@
                                             </connections>
                                         </button>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-h2-zif">
-                                            <rect key="frame" x="34" y="0.0" width="40" height="5"/>
+                                            <rect key="frame" x="23" y="0.0" width="35" height="3"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" ambiguous="YES" id="j8x-an-4zQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="3"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
-                                            <color key="fillColor" red="1" green="0.59607843140000005" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="fillColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="102" translatesAutoresizingMaskIntoConstraints="NO" id="E5j-ia-HZZ" customClass="SBButton">
-                                            <rect key="frame" x="94" y="6" width="41" height="24"/>
+                                            <rect key="frame" x="91" y="5" width="39" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="事务" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="1TG-yU-bOb">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -749,15 +749,15 @@
                                             </connections>
                                         </button>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="qrZ-er-5E3">
-                                            <rect key="frame" x="95" y="0.0" width="40" height="5"/>
+                                            <rect key="frame" x="93" y="1" width="35" height="3"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" ambiguous="YES" id="1hO-IG-aLs">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="3"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="103" translatesAutoresizingMaskIntoConstraints="NO" id="uCM-ss-d6y" customClass="SBButton">
-                                            <rect key="frame" x="155" y="7" width="43" height="23"/>
+                                            <rect key="frame" x="155" y="2" width="42" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="日程" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="juS-TN-V73">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -774,15 +774,15 @@
                                             </connections>
                                         </button>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="4rr-c3-shb">
-                                            <rect key="frame" x="156" y="0.0" width="40" height="5"/>
+                                            <rect key="frame" x="159" y="0.0" width="35" height="3"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" ambiguous="YES" id="rAS-N0-9Lu">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="3"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="104" translatesAutoresizingMaskIntoConstraints="NO" id="Xcg-hF-qbL" customClass="SBButton">
-                                            <rect key="frame" x="216" y="6" width="41" height="25"/>
+                                            <rect key="frame" x="225" y="3" width="43" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="备忘" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="cnY-ZD-TDJ">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -799,15 +799,15 @@
                                             </connections>
                                         </button>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="KQ2-AA-rnH">
-                                            <rect key="frame" x="217" y="0.0" width="40" height="5"/>
+                                            <rect key="frame" x="229" y="1" width="35" height="3"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" ambiguous="YES" id="YdM-CD-MNa">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="3"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="105" translatesAutoresizingMaskIntoConstraints="NO" id="cY4-wY-d04" customClass="SBButton">
-                                            <rect key="frame" x="274" y="8" width="43" height="23"/>
+                                            <rect key="frame" x="300" y="4" width="43" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="资讯" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="Ru9-Xj-oz8">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -824,15 +824,15 @@
                                             </connections>
                                         </button>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="9Ks-XD-M8G">
-                                            <rect key="frame" x="276" y="1" width="40" height="5"/>
+                                            <rect key="frame" x="304" y="1" width="35" height="3"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" ambiguous="YES" id="1qo-sY-tvN">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="3"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" tag="106" translatesAutoresizingMaskIntoConstraints="NO" id="2wD-Db-Dtn" customClass="SBButton">
-                                            <rect key="frame" x="336" y="6" width="43" height="25"/>
+                                            <rect key="frame" x="369" y="6" width="43" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="文件" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="zh5-HB-naw">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -849,10 +849,10 @@
                                             </connections>
                                         </button>
                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="43K-3a-Ijp">
-                                            <rect key="frame" x="337" y="1" width="40" height="5"/>
+                                            <rect key="frame" x="373" y="2" width="35" height="3"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" ambiguous="YES" id="0P6-Zq-ppD">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="3"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
@@ -871,7 +871,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
-                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn width="477" minWidth="40" maxWidth="1000" id="HYd-pJ-KIa">
@@ -892,14 +892,14 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="yO8-ao-MO9">
-                                                                    <rect key="frame" x="17" y="3" width="35" height="35"/>
+                                                                    <rect key="frame" x="19" y="5" width="35" height="35"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HeadImage" id="PK9-Zc-GE4"/>
                                                                 </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="102" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMU-qB-xem">
-                                                                    <rect key="frame" x="59" y="7" width="123" height="22"/>
+                                                                    <rect key="frame" x="59" y="8" width="372" height="22"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="小五小六" id="Mp8-OZ-cSx">
+                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Mp8-OZ-cSx">
                                                                         <font key="font" size="17" name=".PingFangSC-Regular"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -917,7 +917,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="449" height="1"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
-                                                                    <color key="fillColor" red="1" green="0.59607843140000005" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                             </subviews>
                                                         </tableCellView>
@@ -930,8 +930,8 @@
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="进 行" id="JI7-Ib-ch9">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="secondarySelectedControlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="102" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buo-ae-SZ9">
@@ -939,12 +939,12 @@
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="[周报][产品中心][产品部]" id="CZT-Jy-DL7">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="103" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me3-40-0eg">
-                                                                    <rect key="frame" x="196" y="25" width="107" height="17"/>
+                                                                    <rect key="frame" x="199" y="25" width="107" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="(2月3日-2月4日)" id="bv5-dT-qhh">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -991,25 +991,25 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="447" height="1"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
-                                                                    <color key="fillColor" red="1" green="0.59607843140000005" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                             </subviews>
                                                         </tableCellView>
                                                         <tableCellView identifier="scheduleCellID" id="wwp-xs-SqV">
-                                                            <rect key="frame" x="1" y="91" width="477" height="50"/>
+                                                            <rect key="frame" x="1" y="91" width="477" height="44"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="102" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfc-Ld-IXh">
-                                                                    <rect key="frame" x="34" y="7" width="80" height="17"/>
+                                                                    <rect key="frame" x="36" y="5" width="80" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="19:00-20:00" id="MZl-P3-aiq">
                                                                         <font key="font" size="12" name=".PingFangSC-Regular"/>
-                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="101" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swr-y7-Y8K">
-                                                                    <rect key="frame" x="32" y="28" width="190" height="17"/>
+                                                                    <rect key="frame" x="32" y="24" width="190" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="小五更新浏览器、电脑版内测包" id="upj-m1-47M">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1018,22 +1018,22 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="F4z-fX-iKT">
-                                                                    <rect key="frame" x="12" y="0.0" width="447" height="1"/>
+                                                                    <rect key="frame" x="12" y="3" width="447" height="1"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <view key="contentView" ambiguous="YES" id="mHn-f3-LUI">
                                                                         <rect key="frame" x="0.0" y="0.0" width="447" height="1"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
-                                                                    <color key="fillColor" red="1" green="0.59607843140000005" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                             </subviews>
                                                         </tableCellView>
                                                         <tableCellView identifier="notesCellID" id="gdY-R9-kz1">
-                                                            <rect key="frame" x="1" y="143" width="477" height="33"/>
+                                                            <rect key="frame" x="1" y="137" width="477" height="33"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="101" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z26-D9-XCR">
-                                                                    <rect key="frame" x="16" y="9" width="190" height="17"/>
+                                                                    <rect key="frame" x="16" y="12" width="190" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="小五更新浏览器、电脑版内测包" id="pE5-3F-vAH">
                                                                         <font key="font" size="13" name=".PingFangSC-Regular"/>
@@ -1048,12 +1048,12 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="447" height="1"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
-                                                                    <color key="fillColor" red="1" green="0.59607843140000005" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                             </subviews>
                                                         </tableCellView>
                                                         <tableCellView identifier="informationCellID" id="Olq-od-01N">
-                                                            <rect key="frame" x="1" y="178" width="477" height="53"/>
+                                                            <rect key="frame" x="1" y="172" width="477" height="53"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="101" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCK-8g-SHt">
@@ -1095,12 +1095,12 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="447" height="1"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
-                                                                    <color key="fillColor" red="1" green="0.59607843140000005" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                             </subviews>
                                                         </tableCellView>
                                                         <tableCellView identifier="fileCellID" id="xRc-dv-uNd">
-                                                            <rect key="frame" x="1" y="233" width="477" height="49"/>
+                                                            <rect key="frame" x="1" y="227" width="477" height="49"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="K2Z-FO-8Ry">
@@ -1110,7 +1110,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="447" height="1"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     </view>
-                                                                    <color key="fillColor" red="1" green="0.59607843140000005" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="fillColor" red="0.99607843139999996" green="0.87058823529999996" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </box>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" tag="102" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zns-wH-7Tc">
                                                                     <rect key="frame" x="56" y="29" width="58" height="17"/>
@@ -1144,7 +1144,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="lZ8-n6-Q4c">
-                                    <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                    <rect key="frame" x="0.0" y="-16" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="2LI-mW-xCJ">
@@ -1185,7 +1185,6 @@
                                     </subviews>
                                 </view>
                                 <shadow key="shadow" blurRadius="2">
-                                    <size key="offset" width="-6" height="0.0"/>
                                     <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </shadow>
                                 <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

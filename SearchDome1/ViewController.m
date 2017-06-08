@@ -86,7 +86,7 @@ static NSString *FileCell = @"fileCellID";
     
     switch (cellType) {
         case MemberTap:
-            for (int i = 0; i < 10; i ++) {
+            for (int i = 0; i < 4; i ++) {
                 [self.tableviewCellArray addObject:[[MemberCellInfo alloc] initWithDict:@{@"name":@"小五小三0123456789",@"headIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"fileIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740621n.jpg"}]];
             }
             break;
@@ -101,17 +101,17 @@ static NSString *FileCell = @"fileCellID";
             }
             break;
         case NotesTap:
-            for (int i = 0; i < 20; i ++) {
+            for (int i = 0; i < 7; i ++) {
                 [self.tableviewCellArray addObject:[[NotesCellInfo alloc] initWithDict:@{@"notes":@"小五更新浏览器、电脑版本内测包"}]];
             }
             break;
         case InformationTap:
-            for (int i = 0; i < 15; i ++) {
+            for (int i = 0; i < 3; i ++) {
                 [self.tableviewCellArray addObject:[[InformationCellInfo alloc] initWithDict:@{@"information":@"小五更新浏览器、电脑版本内测包",@"fileIconUrl":@"http://news.xinhuanet.com/travel/2014-06/12/126610717_14025522740001n.jpg",@"name":@"李小白",@"detailsTime":@"02-12 18:00"}]];
             }
             break;
         case FileTap:
-            for (int i = 0; i < 10; i ++) {
+            for (int i = 0; i < 5; i ++) {
                 [self.tableviewCellArray addObject:[[FileCellInfo alloc] initWithDict:@{@"fileIconUrl":@"https://www.google.co.jp/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi3g9yrw6vUAhVJGJQKHUbQC1kQjRwIBw&url=http%3A%2F%2Fwww.zhuantilan.com%2Fandroid%2F69597.html&psig=AFQjCNEmPEwJZ9CHrxfUIfaR6zbKaXpKQg&ust=1496917756477173",@"fileName":@"18:00",@"detailsTime":@"02-12 18:00"}]];
             }
             break;
@@ -258,7 +258,8 @@ static NSString *FileCell = @"fileCellID";
     
     //进行 ...略
     NSTextField *progressType = [cell viewWithTag:101];
-    progressType.stringValue = entity.progressType;
+    progressType.stringValue = @"进\n行";
+//    progressType.stringValue = entity.progressType;
     
     NSTextField *department = [cell viewWithTag:102];
     department.stringValue = entity.department;
