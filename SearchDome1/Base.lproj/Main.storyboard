@@ -705,7 +705,7 @@
                                             </view>
                                             <color key="fillColor" red="0.99607843137254903" green="0.87058823529411766" blue="0.74901960784313726" alpha="1" colorSpace="calibratedRGB"/>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-mE-gtu" customClass="SBButton">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-mE-gtu">
                                             <rect key="frame" x="20" y="3" width="40" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="成员" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="7OT-fB-xMS">
@@ -731,7 +731,7 @@
                                             </view>
                                             <color key="fillColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="102" translatesAutoresizingMaskIntoConstraints="NO" id="E5j-ia-HZZ" customClass="SBButton">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="102" translatesAutoresizingMaskIntoConstraints="NO" id="E5j-ia-HZZ">
                                             <rect key="frame" x="91" y="5" width="39" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="事务" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="1TG-yU-bOb">
@@ -756,7 +756,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="103" translatesAutoresizingMaskIntoConstraints="NO" id="uCM-ss-d6y" customClass="SBButton">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="103" translatesAutoresizingMaskIntoConstraints="NO" id="uCM-ss-d6y">
                                             <rect key="frame" x="155" y="2" width="42" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="日程" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="juS-TN-V73">
@@ -781,7 +781,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="104" translatesAutoresizingMaskIntoConstraints="NO" id="Xcg-hF-qbL" customClass="SBButton">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="104" translatesAutoresizingMaskIntoConstraints="NO" id="Xcg-hF-qbL">
                                             <rect key="frame" x="225" y="3" width="43" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="备忘" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="cnY-ZD-TDJ">
@@ -806,7 +806,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="105" translatesAutoresizingMaskIntoConstraints="NO" id="cY4-wY-d04" customClass="SBButton">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="105" translatesAutoresizingMaskIntoConstraints="NO" id="cY4-wY-d04">
                                             <rect key="frame" x="300" y="4" width="43" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="资讯" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="Ru9-Xj-oz8">
@@ -839,7 +839,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </box>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="106" translatesAutoresizingMaskIntoConstraints="NO" id="exm-qn-GaA" customClass="SBButton">
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="106" translatesAutoresizingMaskIntoConstraints="NO" id="exm-qn-GaA">
                                             <rect key="frame" x="374" y="3" width="43" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="bevel" title="文件" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="IHD-hA-95C">

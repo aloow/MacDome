@@ -10,6 +10,25 @@
 
 @implementation MemberCellInfo
 
+//+ (NSArray*)arrayByJSONString:(NSString*)jsonString {
+//  NSError* error = nil;
+//  NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+//  NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+//  if (dic && !error) {
+//    NSMutableArray *mArray = [NSMutableArray array];
+//    [mArray retain];
+//    NSArray *array = [NSArray array];
+//    [array retain];
+//    array = dic[@"data"][@""];
+//  }
+//  
+//  
+//  MemberCellInfo *entity = [[MemberCellInfo alloc] initWithDict:@{}];
+//  
+//  [array release];
+//  return mArray;
+//}
+
 -(instancetype)initWithDict:(NSDictionary *)dict{
     if (self == [super init]) {
         self.name = dict[@"name"];
